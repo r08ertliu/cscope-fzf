@@ -68,15 +68,15 @@ function! CscopeFZF(type, full, query, ...)
 	call fzf#vim#grep(cmd, 1, fzf#vim#with_preview(), a:full)
 endfunction
 
-command! -bang -nargs=* CscopeFZFAssignment    call CscopeFZF("a", <bang>0, <q-args>)
-command! -bang -nargs=* CscopeFZFCaller        call CscopeFZF("c", <bang>0, <q-args>)
-command! -bang -nargs=* CscopeFZFCallee        call CscopeFZF("d", <bang>0, <q-args>)
-command! -bang -nargs=* CscopeFZFEgrep         call CscopeFZF("e", <bang>0, <q-args>)
-command! -bang -nargs=* CscopeFZFFile          call CscopeFZF("f", <bang>0, <q-args>)
-command! -bang -nargs=* CscopeFZFGlobal        call CscopeFZF("g", <bang>0, <q-args>)
-command! -bang -nargs=* CscopeFZFInclude       call CscopeFZF("i", <bang>0, <q-args>)
-command! -bang -nargs=* CscopeFZFSymbol        call CscopeFZF("s", <bang>0, <q-args>)
-command! -bang -nargs=* CscopeFZFText          call CscopeFZF("t", <bang>0, <q-args>)
+command! -bang -nargs=* CsFZFAssign     call CscopeFZF("a", <bang>0, <q-args>)
+command! -bang -nargs=* CsFZFCaller     call CscopeFZF("c", <bang>0, <q-args>)
+command! -bang -nargs=* CsFZFCallee     call CscopeFZF("d", <bang>0, <q-args>)
+command! -bang -nargs=* CsFZFEgrep      call CscopeFZF("e", <bang>0, <q-args>)
+command! -bang -nargs=* CsFZFFile       call CscopeFZF("f", <bang>0, <q-args>)
+command! -bang -nargs=* CsFZFGlobal     call CscopeFZF("g", <bang>0, <q-args>)
+command! -bang -nargs=* CsFZFInc        call CscopeFZF("i", <bang>0, <q-args>)
+command! -bang -nargs=* CsFZFSymbol     call CscopeFZF("s", <bang>0, <q-args>)
+command! -bang -nargs=* CsFZFText       call CscopeFZF("t", <bang>0, <q-args>)
 
 " Frequently used mappings
 nnoremap <silent> <Leader>cg :call CscopeFZF("g", 0, "<C-R><C-W>")<CR>
@@ -85,10 +85,10 @@ nnoremap <silent> <Leader>cf :call CscopeFZF("f", 0, "<C-R><C-W>")<CR>
 nnoremap <silent> <Leader>cs :call CscopeFZF("s", 0, "<C-R><C-W>")<CR>
 nnoremap <silent> <Leader>ct :call CscopeFZF("t", 0, "<C-R><C-W>")<CR>
 
-nnoremap <Leader>cG :CscopeFZFGlobal<SPACE>
-nnoremap <Leader>cC :CscopeFZFCaller<SPACE>
-nnoremap <Leader>cF :CscopeFZFFile<SPACE>
-nnoremap <Leader>cT :CscopeFZFText<SPACE>
-nnoremap <Leader>cS :CscopeFZFSymbol<SPACE>
+nnoremap <Leader>cG :CsFZFGlobal<SPACE>
+nnoremap <Leader>cC :CsFZFCaller<SPACE>
+nnoremap <Leader>cF :CsFZFFile<SPACE>
+nnoremap <Leader>cT :CsFZFText<SPACE>
+nnoremap <Leader>cS :CsFZFSymbol<SPACE>
 
 endif
