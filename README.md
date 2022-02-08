@@ -34,11 +34,11 @@ a small one
 
 ### Key maps
 ```vim
-nnoremap <silent> <Leader>cg :call CscopeFZF("g", 0, "<C-R><C-W>")<CR>
-nnoremap <silent> <Leader>cc :call CscopeFZF("c", 0, "<C-R><C-W>")<CR>
-nnoremap <silent> <Leader>cf :call CscopeFZF("f", 0, "<C-R><C-W>")<CR>
-nnoremap <silent> <Leader>cs :call CscopeFZF("s", 0, "<C-R><C-W>")<CR>
-nnoremap <silent> <Leader>ct :call CscopeFZF("t", 0, "<C-R><C-W>")<CR>
+nnoremap <silent> <Leader>cg :call CscopeFZF("g", 0, "<C-R>=expand('<cword>')<CR>")<CR>
+nnoremap <silent> <Leader>cc :call CscopeFZF("c", 0, "<C-R>=expand('<cword>')<CR>")<CR>
+nnoremap <silent> <Leader>cf :call CscopeFZF("f", 0, "<C-R>=expand('<cfile>')<CR>")<CR>
+nnoremap <silent> <Leader>cs :call CscopeFZF("s", 0, "<C-R>=expand('<cword>')<CR>")<CR>
+nnoremap <silent> <Leader>ct :call CscopeFZF("t", 0, "<C-R>=expand('<cword>')<CR>")<CR>
 
 nnoremap <Leader>cG :CsFZFGlobal<SPACE>
 nnoremap <Leader>cC :CsFZFCaller<SPACE>
