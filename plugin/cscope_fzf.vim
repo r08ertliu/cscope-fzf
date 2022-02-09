@@ -61,9 +61,9 @@ function! CscopeFZF(type, full, query, ...)
 	endif
 
 	" convert "<file> <func> <line number> <line>" into a colorized
-	"         "<file>:<line number> <func> <line>"
+	"         "<file>:<line number>:<func> <line>"
 	let var = "file = $1; $1 = \"\"; $2 = \"\\033[32m<\"$2\">\\033[0m\" ;line_num = $3; $3 = \"\";"
-	let color = "{ " . var . ' printf "\033[36m%s\033[0m:\033[33m%s\033[0m\011\033[37m%s\033[0m\n", file, line_num, $0; }'
+	let color = "{ " . var . ' printf "\033[36m%s\033[0m:\033[33m%s\033[0m:\033[37m%s\033[0m\n", file, line_num, $0; }'
 	let cmd = "(" . l:small_cmd . l:big_cmd . l:native_cmd . ") | awk '" . color . "'"
 	call fzf#vim#grep(cmd, 1, fzf#vim#with_preview(), a:full)
 endfunction
