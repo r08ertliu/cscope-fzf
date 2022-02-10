@@ -10,7 +10,7 @@ Performs cscope queries against
   - .cscope.small
 
 Uses fzf-vim to display results and previews.
-<img width="800" alt="vim-cscope-fzf-preview" src="https://user-images.githubusercontent.com/15187947/152722884-625d9bb2-cfff-49bd-adef-da6360baad83.png">
+![vim-cscope-fzf-preview](https://user-images.githubusercontent.com/15187947/153445493-4229f42c-84a8-4e34-8558-c54211d45019.png)
 
 ## Installation
 
